@@ -7,14 +7,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\documentclass[10pt]{article}
+\documentclass[10pt, letter]{book}
 
 %%%%%%%%
 % Tex Packages
 %%%%%%%%
 \usepackage[utf8]{inputenc}
 \usepackage[polutonikogreek,english]{babel}
-\usepackage[garamond]{psgreek}
+% \usepackage[garamond]{psgreek}
 \usepackage{charter}
 \usepackage{parallel}
 \usepackage{fancyhdr}
@@ -31,7 +31,8 @@ pdftitle          = {Euclid's Elements of Geometry},
 pdfsubject     = {Greek text of Euclid's Elements plus English translation},
 pdfkeywords = {Ancient Greek, Geometry},
 pdfcreator     = {LaTeX with hyperref package},
-pdfproducer  = {dvips + ps2pdf}}
+pdfproducer  = {dvips + ps2pdf}
+}
 
 %%%%%%%%%%
 % New Commands
@@ -54,8 +55,8 @@ pdfproducer  = {dvips + ps2pdf}}
 \topmargin 	= 0.0 in
 \headsep    		= 20pt
 \textheight 	= 8.5truein
-\oddsidemargin  -15pt
-\evensidemargin -10pt
+\oddsidemargin  = 0truein
+\evensidemargin = -0.50truein
 
 %%%%%
 %Content
