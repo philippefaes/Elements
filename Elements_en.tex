@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE THIRTEEN BOOKS OF EUCLID'S ELEMENTS OF GEOMETRY
+%
+% The Greek text of Heiberg plus a modern English translation by
+% Prof. Richard Fitzpatrick, The University of Texas at Austin.
+% E-mail: rfitzp@farside.ph.utexas.edu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[10pt]{book}
+\usepackage[paperwidth=6in, paperheight=9in]{geometry}
+
+%%%%%%%%
+% Tex Packages
+%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[polutonikogreek,english]{babel}
+% \usepackage[garamond]{psgreek}
+\usepackage{charter}
+\usepackage{parallel}
+\usepackage{fancyhdr}
+\usepackage{amssymb,amsmath}
+\usepackage{epsf}
+\usepackage[ps2pdf,bookmarks=true]{hyperref}
+\usepackage{afterpage}
+\usepackage{breqn}
+
+%%%%%%
+% PDF info
+%%%%%%
+\hypersetup{
+pdfauthor      = {Richard Fitzpatrick, University of Texas at Austin},
+pdftitle          = {Euclid's Elements of Geometry},
+pdfsubject     = {Greek text of Euclid's Elements plus English translation},
+pdfkeywords = {Ancient Greek, Geometry},
+pdfcreator     = {LaTeX with hyperref package},
+pdfproducer  = {dvips + ps2pdf}
+}
+
+%%%%%%%%%%
+% New Commands
+%%%%%%%%%%
+\newcommand\gr[1]{\foreignlanguage{polutonikogreek}{#1}}
+\newcommand\gn[1]{\greeknumeral{#1}}
+\newcommand\ggn[1]{\gr{\gn{#1}}}
+\newcommand\ov[1]{$\overline{\mbox{\gr #1}}$}
+\newcommand\nline{\\\mbox{}\\ }
+\newcommand\spa{\mbox{}\\ }
+\long\def\symbolfootnote[#1]#2{\begingroup
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+%%%%%
+% Spacing
+%%%%%
+%\parskip     		= 10pt plus 1pt minus 1pt
+\hfuzz        		= 5pt
+\textwidth  	= 4.75truein
+\topmargin 	    = -0.5 in
+\headsep    	= 20pt
+\textheight 	= 7.25truein
+\oddsidemargin  = -0.25truein
+\evensidemargin = -0.50truein
+
+
+%%%%%
+%Content
+%%%%%
+\begin{document}
+
+\renewcommand{\ParallelLText}[1]{\ignorespaces}
+\renewcommand{\ParallelRText}[1]{#1}
+\sloppy
+
+\include{Book00/Introduction_en}
+\include{Book01/Book1_en}
+\include{Book02/Book2_en}
+\include{Book03/Book3_en}
+\include{Book04/Book4_en}
+\include{Book05/Book5_en}
+\include{Book06/Book6_en}
+\include{Book07/Book7_en}
+\include{Book08/Book8_en}
+\include{Book09/Book9_en}
+\include{Book10/Book10_en}
+\include{Book11/Book11_en}
+\include{Book12/Book12_en}
+\include{Book13/Book13_en}
+
+%\include{Book99/Lexicon}
+
+\end{document}
